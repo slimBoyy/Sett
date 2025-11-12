@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTN - Institut Sains dan Teknologi Nasional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap');
+        
+        :root {
+            --green-primary: #2d5016;
+            --green-secondary: #5a9216;
+            --green-light: #8bc34a;
+            --earth-brown: #6d4c41;
+            --sky-blue: #87ceeb;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .serif-heading {
+            font-family: 'Merriweather', serif;
+        }
+        
+        .eco-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .eco-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--green-primary), var(--green-light));
+        }
+        
+        .eco-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .leaf-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0C40 15 50 15 60 15C50 15 40 30 30 45C20 30 10 15 0 15C10 15 20 15 30 0Z' fill='%232d5016' fill-opacity='0.05'/%3E%3C/svg%3E");
+            background-size: 60px 60px;
+        }
+        
+        .nature-animation {
+            animation: sway 3s ease-in-out infinite;
+        }
+        
+        @keyframes sway {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+        
+        .eco-gradient {
+            background: linear-gradient(135deg, var(--green-primary), var(--green-secondary));
+        }
+        
+        .sustainability-badge {
+            background: var(--green-light);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .earth-tone {
+            background: linear-gradient(135deg, #8d6e63, #a1887f);
+        }
+    </style>
+</head>
+<body class="bg-green-50">
+    <!-- Top Bar -->
+    <div class="bg-green-800 text-white py-2 text-sm">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <span>Since 1950</span>
+            <a href="#daftar" class="bg-green-500 hover:bg-green-600 px-4 py-1 rounded-full transition-colors">
+                Pendaftaran Mahasiswa Baru
+            </a>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 eco-gradient rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">ISTN</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold serif-heading">ISTN</h1>
+                        <p class="text-xs text-gray-600">Institut Sains dan Teknologi Nasional</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="hover:text-green-700 transition-colors font-medium">Beranda</a>
+                    <a href="#program-studi" class="hover:text-green-700 transition-colors font-medium">Program Studi</a>
+                    <a href="#berita" class="hover:text-green-700 transition-colors font-medium">Berita</a>
+                    <a href="#daftar" class="hover:text-green-700 transition-colors font-medium">Pendaftaran</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="beranda" class="relative py-20 md:py-32 overflow-hidden">
+        <div class="absolute inset-0 leaf-pattern opacity-20"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="sustainability-badge mb-6">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Eco-Certified Institution
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-6xl font-bold serif-heading mb-6">
+                        Membangun Masa Depan
+                        <span class="block text-green-700">Melalui Inovasi</span>
+                        <span class="block text-green-500">Pendidikan Hijau</span>
+                    </h1>
+                    
+                    <p class="text-lg text-gray-600 mb-8">
+                        ISTN adalah institusi pendidikan tinggi yang berkomitmen untuk menghasilkan lulusan berkualitas di bidang sains dan teknologi.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#daftar" class="px-8 py-4 eco-gradient text-white font-semibold rounded-lg hover:shadow-lg transition-shadow">
+                            Daftar Sekarang
+                        </a>
+                        <a href="#program-studi" class="px-8 py-4 border-2 border-green-700 text-green-700 font-semibold rounded-lg hover:bg-green-700 hover:text-white transition-colors">
+                            Jelajahi Program
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="https://picsum.photos/seed/istn-green/600/400" alt="ISTN Green" class="rounded-2xl shadow-xl nature-animation">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg">
+                        <div class="flex items-center space-x-4">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-green-600">100%</div>
+                                <p class="text-sm text-gray-600">Renewable Energy</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-green-500">0</div>
+                                <p class="text-sm text-gray-600">Carbon Emission</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Programs Section -->
+    <section id="program-studi" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold serif-heading mb-4">Program Studi ISTN</h2>
+                <div class="w-24 h-1 bg-green-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="eco-card p-8">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold serif-heading mb-4">Program Sarjana (S1)</h3>
+                    <p class="text-gray-600 mb-6">Program sarjana dengan pendekatan berkelanjutan</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Teknik Informatika</li>
+                        <li>• Sistem Informasi</li>
+                        <li>• Teknik Elektro</li>
+                        <li>• Teknik Industri</li>
+                        <li>• Teknik Sipil</li>
+                        <li>• Teknik Mesin</li>
+                        <li>• Teknik Lingkungan</li>
+                        <li>• Teknik Arsitektur</li>
+                    </ul>
+                </div>
+                
+                <div class="eco-card p-8">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold serif-heading mb-4">Program Magister (S2)</h3>
+                    <p class="text-gray-600 mb-6">Program pascasarjana untuk penelitian hijau</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Magister Teknik Informatika</li>
+                        <li>• Magister Sistem Informasi</li>
+                        <li>• Magister Teknik Elektro</li>
+                        <li>• Magister Manajemen</li>
+                        <li>• Magister Teknik Industri</li>
+                    </ul>
+                </div>
+                
+                <div class="eco-card p-8">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold serif-heading mb-4">Program Profesi & RPL</h3>
+                    <p class="text-gray-600 mb-6">Program profesi dan pengakuan pembelajaran</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Profesi Insinyur</li>
+                        <li>• Profesi Akuntansi</li>
+                        <li>• Profesi Ners</li>
+                        <li>• RPL Teknik Informatika</li>
+                        <li>• RPL Sistem Informasi</li>
+                        <li>• RPL Manajemen</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- News Section -->
+    <section id="berita" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold serif-heading mb-4">Berita & Highlight ISTN</h2>
+                <div class="w-24 h-1 bg-green-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="eco-card overflow-hidden">
+                    <img src="https://picsum.photos/seed/istn-news1/400/250" alt="ISTN News" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">KERJASAMA</span>
+                        <h3 class="text-lg font-bold mt-2 mb-2">Rektor ISTN Lakukan Kunjungan ke ITB</h3>
+                        <p class="text-gray-600 text-sm">15 Mei 2023</p>
+                    </div>
+                </div>
+                
+                <div class="eco-card overflow-hidden">
+                    <img src="https://picsum.photos/seed/istn-news2/400/250" alt="ISTN News" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">PENELITIAN</span>
+                        <h3 class="text-lg font-bold mt-2 mb-2">ISTN Dorong Kedaulatan Digital Kesehatan</h3>
+                        <p class="text-gray-600 text-sm">10 Mei 2023</p>
+                    </div>
+                </div>
+                
+                <div class="eco-card overflow-hidden">
+                    <img src="https://picsum.photos/seed/istn-news3/400/250" alt="ISTN News" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">KEMAHASISWAAN</span>
+                        <h3 class="text-lg font-bold mt-2 mb-2">ISTN Buka Peluang Magang di Jepang</h3>
+                        <p class="text-gray-600 text-sm">5 Mei 2023</p>
+                    </div>
+                </div>
+                
+                <div class="eco-card overflow-hidden">
+                    <img src="https://picsum.photos/seed/istn-news4/400/250" alt="ISTN News" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">WORKSHOP</span>
+                        <h3 class="text-lg font-bold mt-2 mb-2">Workshop AI untuk Industri Kreatif</h3>
+                        <p class="text-gray-600 text-sm">1 Mei 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 eco-gradient rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold">ISTN</span>
+                        </div>
+                        <span class="serif-heading text-lg">ISTN Green</span>
+                    </div>
+                    <p class="text-gray-300 text-sm">Institut Sains dan Teknologi Nasional</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">Admission</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Research</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Sustainability</a></li>
+                    </ul>
+                </div>
+                
+                <div

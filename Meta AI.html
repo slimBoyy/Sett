@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTN - Institut Sains dan Teknologi Nasional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --neon-cyan: #00ffff;
+            --neon-purple: #9d00ff;
+            --dark-bg: #0a0a12;
+            --card-bg: #161622;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        .futuristic-font {
+            font-family: 'Orbitron', monospace;
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+        }
+        
+        .neon-border {
+            border: 1px solid var(--neon-cyan);
+            box-shadow: 0 0 10px var(--neon-cyan);
+        }
+        
+        .tech-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+        }
+        
+        .glitch {
+            position: relative;
+            animation: glitch 3s infinite;
+        }
+        
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+        }
+        
+        .cyber-grid {
+            background-image: linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Background Grid -->
+    <div class="fixed inset-0 cyber-grid opacity-20 pointer-events-none"></div>
+    
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-cyan-500/30">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="text-black font-bold futuristic-font">ISTN</span>
+                    </div>
+                    <span class="futuristic-font text-xl font-bold neon-text">ISTN</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="hover:text-cyan-400 transition-colors">BERANDA</a>
+                    <a href="#program-studi" class="hover:text-cyan-400 transition-colors">PROGRAM</a>
+                    <a href="#berita" class="hover:text-cyan-400 transition-colors">BERITA</a>
+                    <a href="#daftar" class="hover:text-cyan-400 transition-colors">PENDAFTARAN</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="beranda" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-cyan-900/20"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <div class="mb-8">
+                    <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full neon-border">
+                        <span class="pulse w-2 h-2 bg-cyan-400 rounded-full"></span>
+                        <span class="text-sm futuristic-font">SYSTEM ONLINE</span>
+                    </div>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold futuristic-font glitch mb-6">
+                    ISTN TECHFUTURE
+                    <span class="block text-3xl md:text-5xl text-cyan-400 neon-text">INSTITUTE</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                    Membangun Masa Depan Melalui Inovasi Pendidikan
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#daftar" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg font-bold futuristic-font hover:scale-105 transition-transform">
+                        DAFTAR SEKARANG
+                    </a>
+                    <a href="#program-studi" class="px-8 py-4 neon-border rounded-lg font-bold futuristic-font hover:bg-cyan-500/10 transition-all">
+                        JELAJAHI PROGRAM
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Programs Section -->
+    <section id="program-studi" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold futuristic-font mb-4">PROGRAM STUDI ISTN</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="tech-card p-8">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold futuristic-font mb-4">Program Sarjana (S1)</h3>
+                    <p class="text-gray-400 mb-6">Program sarjana dengan fokus teknologi masa depan</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>• Teknik Informatika</li>
+                        <li>• Sistem Informasi</li>
+                        <li>• Teknik Elektro</li>
+                        <li>• Teknik Industri</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-card p-8">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold futuristic-font mb-4">Program Magister (S2)</h3>
+                    <p class="text-gray-400 mb-6">Program pascasarjana untuk penelitian mendalam</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>• Magister Teknik Informatika</li>
+                        <li>• Magister Sistem Informasi</li>
+                        <li>• Magister Teknik Elektro</li>
+                        <li>• Magister Manajemen</li>
+                    </ul>
+                </div>
+                
+                <div class="tech-card p-8">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-600 rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold futuristic-font mb-4">Program Profesi & RPL</h3>
+                    <p class="text-gray-400 mb-6">Program profesi dan pengakuan pembelajaran lampau</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>• Profesi Insinyur</li>
+                        <li>• Profesi Akuntansi</li>
+                        <li>• RPL Teknik Informatika</li>
+                        <li>• RPL Sistem Informasi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- News Section -->
+    <section id="berita" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold futuristic-font mb-4">BERITA ISTN</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="tech-card overflow-hidden">
+                    <img src="https://picsum.photos/seed/istn-news1/400/250" alt="ISTN News" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-cyan-400 text-sm">KERJASAMA</span>
+                        <h3 class="text-lg font-bold mt-2 mb-2">Rektor ISTN Lakukan Kunjungan ke ITB</h3>
+                        <p class="text-gray-400 text-sm">15 Mei 2023</p>
+                    </div>
+                </div>
+                
+                <div class="tech-card overflow-hidden">
+                    <img src="https://picsum.photos/seed/istn-news2/400/250" alt="ISTN News" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-purple-400 text-sm">PENELITIAN</span>
+                        <h3 class="text-lg font-bold mt-2 mb-2">ISTN Dorong Kedaulatan Digital Kesehatan</h3>
+                        <p class="text-gray-400 text-sm">10 Mei 2023</p>
+                    </div>
+                </div>
+                
+                <div class="tech-card overflow-hidden">
+                    <img src="https://picsum.photos/seed/istn-news3/400/250" alt="ISTN News" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-green-400 text-sm">KEMAHASISWAAN</span>
+                        <h3 class="text-lg font-bold mt-2 mb-2">ISTN Buka Peluang Magang di Jepang</h3>
+                        <p class="text-gray-400 text-sm">5 Mei 2023</p>
+                    </div>
+                </div>
+                
+                <div class="tech-card overflow-hidden">
+                    <img src="https://picsum.photos/seed/istn-news4/400/250" alt="ISTN News" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-yellow-400 text-sm">WORKSHOP</span>
+                        <h3 class="text-lg font-bold mt-2 mb-2">Workshop AI untuk Industri Kreatif</h3>
+                        <p class="text-gray-400 text-sm">1 Mei 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-cyan-500/30">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <div class="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-black font-bold futuristic-font">ISTN</span>
+                        </div>
+                        <span class="futuristic-font text-lg">ISTN TechFuture Institute</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Institut Sains dan Teknologi Nasional</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Facebook</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Twitter</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

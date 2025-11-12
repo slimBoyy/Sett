@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTN - Institut Sains dan Teknologi Nasional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;700&display=swap');
+        
+        :root {
+            --medical-blue: #0066cc;
+            --medical-green: #00a86b;
+            --medical-teal: #008080;
+            --light-blue: #e6f2ff;
+            --light-green: #e6f7f0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .slab-font {
+            font-family: 'Roboto Slab', serif;
+        }
+        
+        .medical-gradient {
+            background: linear-gradient(135deg, var(--medical-blue), var(--medical-green));
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .heartbeat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            14% { transform: scale(1.1); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.1); }
+            70% { transform: scale(1); }
+        }
+        
+        .medical-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--medical-blue);
+        }
+        
+        .medical-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--medical-blue), var(--medical-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .dna-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0C60 20 80 20 100 20C80 20 60 40 50 50C40 60 20 60 0 60C20 60 40 40 50 30C60 20 80 20 100 20C80 20 60 0 50 0Z' fill='%2300a86b' fill-opacity='0.1'/%3E%3C/svg%3E");
+            background-size: 100px 100px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Bar -->
+    <div class="bg-teal-600 text-white py-2 text-sm">
+        <div class="container mx-auto px-6 text-center">
+            <p>Selamat Datang di ISTN - Kampus Kolaborasi</p>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 medical-gradient rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold slab-font">ISTN</h1>
+                        <p class="text-xs text-gray-600">Institut Sains dan Teknologi Nasional</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="hover:text-medical-blue transition-colors font-medium">Beranda</a>
+                    <a href="#program-studi" class="hover:text-medical-blue transition-colors font-medium">Program Studi</a>
+                    <a href="#berita" class="hover:text-medical-blue transition-colors font-medium">Berita</a>
+                    <a href="#daftar" class="hover:text-medical-blue transition-colors font-medium">Pendaftaran</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="beranda" class="relative py-20 md:py-32 overflow-hidden">
+        <div class="absolute inset-0 dna-pattern opacity-10"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-3 h-3 bg-green-500 rounded-full pulse-animation mr-3"></div>
+                        <span class="text-sm font-semibold text-gray-600">SYSTEM HEALTH: OPTIMAL</span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-6xl font-bold slab-font mb-6">
+                        Membangun Masa Depan
+                        <span class="block text-medical-blue">Melalui Inovasi</span>
+                        <span class="block text-green-600">Pendidikan</span>
+                    </h1>
+                    
+                    <p class="text-lg text-gray-600 mb-8">
+                        ISTN adalah institusi pendidikan tinggi yang berkomitmen untuk menghasilkan lulusan berkualitas di bidang sains dan teknologi.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#daftar" class="px-8 py-4 medical-gradient text-white font-semibold rounded-lg hover:shadow-lg transition-shadow">
+                            Daftar Sekarang
+                        </a>
+                        <a href="#program-studi" class="px-8 py-4 border-2 border-medical-blue text-medical-blue font-semibold rounded-lg hover:bg-medical-blue hover:text-white transition-colors">
+                            Jelajahi Program
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="https://picsum.photos/seed/istn-medical/600/400" alt="ISTN Medical" class="rounded-2xl shadow-xl">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-600 heartbeat" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-bold slab-font text-2xl">5000+</p>
+                                <p class="text-sm text-gray-600">Health Professionals</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="stat-number slab-font">50+</div>
+                    <p class="text-gray-600">Program Studi</p>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number slab-font">10K+</div>
+                    <p class="text-gray-600">Mahasiswa Aktif</p>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number slab-font">95%</div>
+                    <p class="text-gray-600">Tingkat Kelulusan</p>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number slab-font">200+</div>
+                    <p class="text-gray-600">Partner Rumah Sakit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Programs Section -->
+    <section id="program-studi" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold slab-font mb-4">Program Studi ISTN</h2>
+                <div class="w-24 h-1 medical-gradient mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="medical-card p-8">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold slab-font mb-4">Program Sarjana (S1)</h3>
+                    <p class="text-gray-600 mb-6">Program sarjana dengan kurikulum berbasis teknologi kesehatan</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Teknik Informatika</li>
+                        <li>• Sistem Informasi</li>
+                        <li>• Teknik Elektro</li>
+                        <li>• Teknik Industri</li>
+                        <li>• Teknik Sipil</li>
+                        <li>• Teknik Mesin</li>
+                        <li>• Teknik Lingkungan</li>
+                        <li>• Teknik Arsitektur</li>
+                    </ul>
+                </div>
+                
+                <div class="medical-card p-8">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold slab-font mb-4">Program Magister (S2)</h3>
+                    <p class="text-gray-600 mb-6">Program pascasarjana untuk penelitian medis</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Magister Teknik Informatika</li>
+                        <li>• Magister Sistem Informasi</li>
+                        <li>• Magister Teknik Elektro</li>
+                        <li>• Magister Manajemen</li>
+                        <li>• Magister Teknik Industri</li>
+                    </ul>
+                </div>
+                
+                <div class="medical-card p-8">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold slab-font mb-4">Program Profesi & RPL</h3>
+                    <p class="text-gray-600 mb-6">Program profesi medis dan pengakuan pembelajaran</p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li>• Profesi Insinyur</li>
+                        <li>• Profesi Akuntansi</li>
+                        <li>• Profesi Ners</li>
+                        <li>• RPL Teknik Informatika</li>
+                        <li>• RPL Sistem Informasi</li>
+                        <li>• RPL Manajemen</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- News Section -->
+    <section id="berita" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold slab-font mb-4">Berita & Highlight ISTN</h2>
+                <div class="w-24 h-1 medical-gradient mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="medical-card overflow-hidden">
+                    <img src="https://picsum.photos/seed/istn-news1/400/250" alt="ISTN News" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-blue-600 text-sm font-semibold">KERJASAMA</span>
+                        <h3 class="text-lg font-bold mt-2 mb-2">Rektor ISTN Lakukan Kunjungan ke ITB</h3>
+                        <p class="text-gray-600 text-sm">15 Mei 2023</p>
+                    </div>
+                </div>
+                
+                <div class="medical-card overflow-hidden">
+                    <img src="https://picsum.photos/seed/istn-news2/400/250" alt="ISTN News" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-green-600 text-sm font-semibold">PENELITIAN</span>
+                        <h3 class="text-lg font-bold mt-2 mb-2">ISTN Dorong Kedaulatan Digital Kesehatan</h3>
+                        <p class="text-gray-600 text-sm">10 Mei 2023</p>
+                    </div>
+                </div>
+                
+                <div class="medical-card overflow-hidden">
+                    <img src="https://picsum.photos/seed/istn-news3/400/250" alt="ISTN News" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-teal-600 text-sm font-semibold">KEMAHASISWAAN</span>
+                        <h3 class="text-lg font-bold mt-2 mb-2">ISTN Buka Peluang Magang di Jepang</h3>
+                        <p class="text-gray-600 text-sm">5 Mei 2023</p>
+                    </div>
+                </div>
+                
+                <div class="medical-card overflow-hidden">
+                    <img src="https://picsum.photos/seed/istn-news4/400/250" alt="ISTN News" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-blue-600 text-sm font-semibold">WORKSHOP</span>
+                        <h3 class="text-lg font-bold mt-2 mb-2">Workshop AI untuk Industri Kreatif</h3>
+                        <p class="text-gray-600 text-sm">1 Mei 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 medical-gradient rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                        </div>
+                        <span class="slab-font text-lg">ISTN Medical</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Institut Sains dan Teknologi Nasional</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Admission</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Programs</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Research</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Hospitals</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>Jl. KH. Ahmad Dahlan No. 67, Cirendeu</li>
+                        <li>Phone: (021) 7401888</li>
+                        <li>Email: info@istn.ac.id</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 Institut Sains dan Teknologi Nasional. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

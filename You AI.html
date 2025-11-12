@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTN - Institut Sains dan Teknologi Nasional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --vibrant-pink: #ff006e;
+            --vibrant-blue: #3a86ff;
+            --vibrant-yellow: #ffbe0b;
+            --vibrant-green: #8338ec;
+            --dark: #2b2d42;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+        
+        .bebas-font {
+            font-family: 'Bebas Neue', cursive;
+        }
+        
+        .asymmetrical-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1rem;
+        }
+        
+        .col-span-7 { grid-column: span 7; }
+        .col-span-5 { grid-column: span 5; }
+        .col-span-4 { grid-column: span 4; }
+        .col-span-8 { grid-column: span 8; }
+        
+        .skew-card {
+            transform: skew(-2deg);
+            transition: all 0.3s ease;
+        }
+        
+        .skew-card:hover {
+            transform: skew(0deg) scale(1.02);
+        }
+        
+        .skew-card-content {
+            transform: skew(2deg);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, var(--vibrant-pink), var(--vibrant-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .blob-shape {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            animation: blob 8s ease-in-out infinite;
+        }
+        
+        @keyframes blob {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+        }
+        
+        .creative-border {
+            border: 3px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(45deg, var(--vibrant-pink), var(--vibrant-blue), var(--vibrant-yellow)) border-box;
+        }
+        
+        .floating-element {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .zigzag-divider {
+            height: 20px;
+            background-image: linear-gradient(135deg, transparent 25%, var(--vibrant-pink) 25%, var(--vibrant-pink) 50%, transparent 50%, transparent 75%, var(--vibrant-blue) 75%);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Colorful Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-lg">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 blob-shape bg-gradient-to-br from-pink-500 to-blue-500 flex items-center justify-center">
+                        <span class="text-white font-bold text-xl bebas-font">ISTN</span>
+                    </div>
+                    <span class="text-2xl bebas-font gradient-text">ISTN</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="font-semibold hover:text-pink-500 transition-colors">BERANDA</a>
+                    <a href="#program-studi" class="font-semibold hover:text-blue-500 transition-colors">PROGRAM</a>
+                    <a href="#berita" class="font-semibold hover:text-yellow-500 transition-colors">BERITA</a>
+                    <a href="#daftar" class="font-semibold hover:text-purple-500 transition-colors">DAFTAR</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section with Asymmetrical Layout -->
+    <section id="beranda" class="min-h-screen flex items-center relative pt-20">
+        <div class="absolute top-10 right-10 w-32 h-32 bg-yellow-400 rounded-full opacity-20 floating-element"></div>
+        <div class="absolute bottom-20 left-10 w-40 h-40 bg-pink-400 rounded-full opacity-20 floating-element" style="animation-delay: 1s;"></div>
+        
+        <div class="container mx-auto px-6">
+            <div class="asymmetrical-grid items-center">
+                <div class="col-span-7">
+                    <h1 class="text-6xl md:text-8xl font-bold bebas-font mb-4">
+                        CREATE.
+                        <span class="block text-pink-500">DESIGN.</span>
+                        <span class="block text-blue-500">INSPIRE.</span>
+                    </h1>
+                    
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8">
+                        Membangun Masa Depan Melalui Inovasi Pendidikan
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#daftar" class="px-8 py-4 bg-pink-500 text-white font-bold rounded-full hover:scale-105 transition-transform">
+                            DAFTAR SEKARANG
+                        </a>
+                        <a href="#program-studi" class="px-8 py-4 creative-border font-bold rounded-full hover:scale-105 transition-transform">
+                            JELAJAHI PROGRAM
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-span-5">
+                    <div class="relative">
+                        <img src="https://picsum.photos/seed/istn-creative/500/600" alt="ISTN Creative" class="rounded-3xl shadow-2xl">
+                        <div class="absolute -bottom-6 -right-6 bg-yellow-400 text-dark p-4 rounded-2xl transform rotate-3">
+                            <p class="font-bold bebas-font text-2xl">500+</p>
+                            <p class="text-sm">Creative Students</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Programs Section -->
+    <section id="program-studi" class="py-20 bg-gradient-to-br from-pink-50 to-blue-50">
+        <div class="zigzag-divider"></div>
+        <div class="container mx-auto px-6 py-12">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold bebas-font mb-4">PROGRAM STUDI ISTN</h2>
+                <div class="flex justify-center gap-4">
+                    <div class="w-20 h-1 bg-pink-500"></div>
+                    <div class="w-20 h-1 bg-blue-500"></div>
+                    <div class="w-20 h-1 bg-yellow-500"></div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="skew-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="skew-card-content">
+                        <div class="h-48 bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"></path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold bebas-font mb-2">Program Sarjana (S1)</h3>
+                            <p class="text-gray-600 mb-4">Program sarjana dengan pendekatan kreatif</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">Teknik Informatika</span>
+                                <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">Sistem Informasi</span>
+                                <span class="px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm">Teknik Elektro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skew-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="skew-card-content">
+                        <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold bebas-font mb-2">Program Magister (S2)</h3>
+                            <p class="text-gray-600 mb-4">Program pascasarjana untuk penelitian kreatif</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Magister TI</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Magister SI</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Magister Manajemen</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skew-card bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="skew-card-content">
+                        <div class="h-48 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
+                            <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold bebas-font mb-2">Program Profesi & RPL</h3>
+                            <p class="text-gray-600 mb-4">Program profesi dan pengakuan pembelajaran</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">Profesi Insinyur</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">RPL TI</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">RPL SI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zigzag-divider transform rotate-180"></div>
+    </section>
+    
+    <!-- News Section -->
+    <section id="berita" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold bebas-font mb-4">BERITA ISTN</h2>
+                <p class="text-xl text-gray-600">Informasi terkini seputar ISTN</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="col-span-2 row-span-2">
+                    <img src="https://picsum.photos/seed/istn-news1/600/600" alt="ISTN News" class="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform">
+                </div>
+                <div>
+                    <img src="https://picsum.photos/seed/istn-news2/300/300" alt="ISTN News" class="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform">
+                </div>
+                <div>
+                    <img src="https://picsum.photos/seed/istn-news3/300/300" alt="ISTN News" class="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform">
+                </div>
+                <div>
+                    <img src="https://picsum.photos/seed/istn-news4/300/300" alt="ISTN News" class="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform">
+                </div>
+                <div>
+                    <img src="https://picsum.photos/seed/istn-news5/300/300" alt="ISTN News" class="w-full h-full object-cover rounded-2xl hover:scale-105 transition-transform">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <div class="w-10 h-10 blob-shape bg-gradient-to-br from-pink-500 to-blue-500 flex items-center justify-center">
+                            <span class="text-white font-bold bebas-font">ISTN</span>
+                        </div>
+                        <span class="text-xl bebas-font">ISTN CREATIVE</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Institut Sains dan Teknologi Nasional</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-pink-400 transition-colors">Instagram</a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors">Facebook</a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
