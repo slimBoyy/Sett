@@ -152,7 +152,7 @@
     <section class="links">
       <h2>Come N Here</h2>
       <div class="button-group">
-        <a href="file:///C:\MyWeb (Rafan)\web 8\Z AI.php" target="_blank"><span>Z AI</span></a>
+        <a href="Z AI.php" target="_blank"><span>Z AI</span></a>
       </div>
       <p class="note">"See you tomorrow, <a>··· · ·   –·–– – ––– ··–   – ––– –– ––– ·–· ·–· ––– ·––"</a></p>
     </section>
@@ -160,3 +160,4 @@
 
 </body>
 </html>
+
